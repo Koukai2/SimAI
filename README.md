@@ -150,6 +150,37 @@ $ AS_SEND_LAT=3 AS_NVLS_ENABLE=1 ./bin/SimAI_simulator -t 16 -w ./example/microA
 
 ```
 
+
+
+## GCC12 installation and selection
+
+```bash
+# install a few different versions of the GCC and G++ compilers on Ubuntu 24.04 Use the update-alternatives tool to create list of multiple GCC and G++ compiler alternatives
+
+$ sudo apt update
+$ sudo apt install build-essential
+$ sudo apt -y install gcc-9 g++-9 gcc-10 g++-10 gcc-11 g++-11 gcc-12 g++-12 gcc-13 g++-13
+
+# Use the update-alternatives tool to create list of multiple GCC and G++ compiler alternatives
+$ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 9
+$ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-9 9
+$ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 10
+$ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-10 10
+$ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 11
+$ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-11 11
+$ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-12 12
+$ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-12 12
+$ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-13 13
+$ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-13 13
+
+# Check the available C and C++ compilers list on your Ubuntu 24.04 system and select desired gcc12 version by entering relevant selection number
+$ sudo update-alternatives --config gcc
+$ sudo update-alternatives --config g++
+
+```
+
+# 
+
 # Contact us
 
 Please email Gang Lu (yunding.lg@alibaba-inc.com) or Qingxu Li (qingxu.lqx@alibaba-inc.com) if you have any questions.
